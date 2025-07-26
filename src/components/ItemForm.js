@@ -14,7 +14,7 @@ function ItemForm({ onItemFormSubmit }) {
       category: itemCategory,
     };
 
-    onItemFormSubmit(newItem); // ✅ call the prop
+    onItemFormSubmit(newItem); 
     setItemName("");
     setItemCategory("Produce");
   }

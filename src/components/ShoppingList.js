@@ -4,7 +4,7 @@ import Filter from "./Filter";
 import Item from "./Item";
 
 function ShoppingList({ items }) {
-  const [itemList, setItemList] = useState(items); // ✅ hold items locally
+  const [itemList, setItemList] = useState(items); 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [search, setSearch] = useState("");
 
@@ -17,7 +17,7 @@ function ShoppingList({ items }) {
   }
 
   function handleItemFormSubmit(newItem) {
-    setItemList([...itemList, newItem]); // ✅ add new item to state
+    setItemList([...itemList, newItem]); 
   }
 
   const itemsToDisplay = itemList.filter((item) => {
@@ -28,7 +28,7 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
-      <ItemForm onItemFormSubmit={handleItemFormSubmit} /> {/* ✅ pass prop */}
+      <ItemForm onItemFormSubmit={handleItemFormSubmit} /> 
       <Filter
         search={search}
         onSearchChange={handleSearchChange}
